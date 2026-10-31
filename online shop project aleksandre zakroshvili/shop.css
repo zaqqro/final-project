@@ -1,0 +1,646 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+.header{
+  background:#eee;
+  padding:15px 40px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo h1{
+  border-bottom:3px solid black;
+}
+
+.logo span{
+  color:#6c5ce7;
+}
+
+.search-box{
+  position:relative;
+  width:40%;
+}
+
+.search-box input{
+  width:100%;
+  padding:10px 40px 10px 15px;
+  border-radius:30px;
+  border:1px solid #aaa;
+}
+
+.search-box i{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.nav-right{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.burger span{
+  display:block;
+  width:25px;
+  height:3px;
+  background:#6c5ce7;
+  margin:4px;
+  cursor:pointer;
+}
+
+.modal{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#ddd;
+  padding:30px;
+  border-radius:20px;
+  width:500px;
+  z-index:1000;
+  transition:0.3s;
+}
+
+.modal.active{
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.login{
+  width:400px;
+}
+
+.signup{
+  width:800px;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:10px;
+  background:black;
+  color:white;
+  width:35px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.line{
+  height:3px;
+  background:black;
+  margin:15px 0;
+}
+
+.input-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #444;
+  border-radius:10px;
+  padding:10px;
+  margin:10px 0;
+  background:#eee;
+}
+
+.input-box input{
+  border:none;
+  outline:none;
+  background:transparent;
+  margin-left:10px;
+  width:100%;
+}
+
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.full{
+  width:100%;
+}
+
+
+.gender{
+  margin:15px 0;
+}
+
+
+.btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:15px;
+  background:#555;
+  color:white;
+  font-size:18px;
+  margin-top:10px;
+}
+
+.btn.dark{
+  background:black;
+}
+
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  top:0;
+  left:0;
+}
+
+.overlay.active{
+  display:block;
+}
+
+.side-menu{
+  position:fixed;
+  right:-250px;
+  top:0;
+  width:250px;
+  height:100%;
+  background:white;
+  padding:20px;
+  transition:0.3s;
+}
+
+.side-menu.active{
+  right:0;
+}
+
+.close-menu{
+  cursor:pointer;
+  margin-bottom:20px;
+}
+
+.hero{
+    padding:0;
+}
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    display: block;
+}
+.hero-container img.active{
+    opacity: 1;
+}
+.hero-text{
+    max-width: 500px;
+    position: absolute;
+    margin: 150px;
+}
+.badge{
+    background: red;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.herp-text h1{
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.hero-text p{
+    color: #252525;
+    margin-bottom: 30px;
+}
+button{
+    padding: 14px 40px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg,#4f7c77,#6da3ff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.icon{
+    opacity: 0;
+    margin-left: 8px;
+    transform: translateX(15px);
+    transition: all 0.3s ease;
+}
+button:hover .icon{
+opacity: 1;
+transform: translateX(0);
+}
+.hero-img img{
+width: 1000px;
+max-width: 100%;
+}
+
+
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pay-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pay-icons {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto; 
+}
+
+.pay-icons i {
+    font-size: 28px;
+    color: #555;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fa-cc-visa:hover {
+    color: #1a1f71;
+    transform: scale(1.2);
+}
+
+.fa-cc-mastercard:hover {
+    color: #eb001b;
+    transform: scale(1.2);
+}
+
+.fa-cc-amex:hover {
+    color: #2e77bb;
+    transform: scale(1.2);
+}
+
+.fa-cc-jcb:hover {
+    color: #0f4c81;
+    transform: scale(1.2);
+}
+
+.fa-cc-diners-club:hover {
+    color: #0079be;
+    transform: scale(1.2);
+}
+
+.fa-cc-discover:hover {
+    color: #ff6000;
+    transform: scale(1.2);
+}
+
+.fa-paypal:hover {
+    color: #003087;
+    transform: scale(1.2);
+}
+
+.copy {
+    text-align: center;
+    font-size: 14px;
+   background-color:  #aaa;
+    margin-top: 10px;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.home {
+  font-weight: 500;
+}
+
+.current {
+  color: #c7c7c7;
+}
+
+.sep {
+  margin: 0 6px;
+}
+
+
+.title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filter-item:hover {
+  color: black;
+}
+
+.icon {
+  transition: 0.3s;
+}
+
+.filter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  font-size: 14px;
+  color: #555;
+}
+
+.filter-content label,
+.filter-content p {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.filter-item.active .icon {
+  transform: rotate(45deg);
+}
+
+.filter-content.active {
+  max-height: 200px;
+}
+
+.get-all {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back {
+  font-size: 18px;
+}
+
+#product-sect{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.maindiv{
+  display: flex;
+}
+
+
+
+
+.card {
+  width: 260px;
+  background: #f2f2f2;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.img-box {
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-box img {
+  max-width: 180px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin-bottom: 10px;
+}
+
+.price .new {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: red;
+  margin-left: 8px;
+}
+
+.rating {
+  margin-bottom: 15px;
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #555;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: black;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: -30px;
+  background: red;
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(-45deg);
+  font-size: 12px;
+}
+
+
+@media (max-width: 1024px) {
+
+  .search-box {
+    width: 60%;
+  }
+
+  .hero-text {
+    margin: 80px;
+    max-width: 400px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-container {
+    height: 300px;
+  }
+
+  .hero-text {
+    margin: 40px;
+    max-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .maindiv {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  #product-sect {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .hero-text {
+    margin: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .img-box img {
+    max-width: 140px;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .signup {
+    width: 95%;
+  }
+
+  .login {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+

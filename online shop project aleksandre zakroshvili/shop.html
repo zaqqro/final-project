@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Store</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+
+            <div class="logo">
+                <h1>Digital<span>Store</span></h1>
+            </div>
+
+           <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <i class="fa fa-search"></i>
+</div>
+
+            <div class="nav-right">
+                <div onclick="openModal('signup')">Sign up</div>
+                <div onclick="openModal('login')">Log in</div>
+
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- LOGIN -->
+    <div class="modal" id="loginModal">
+  <button class="close-btn" type="button" onclick="closeModal('loginModal')">x</button>
+  <h2>Log In</h2>
+
+  <form id="loginForm">
+    <div class="row">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+    </div>
+    <div class="row">
+      <input type="password" id="loginPassword" placeholder="Password" required>
+    </div>
+    <button class="sumbit-btn" type="submit">Log In</button>
+    <p>Don`t have an account? Signup now</p>
+  </form>
+  
+</div>
+
+<!-- SIGNUP -->
+<div class="modal" id="registerModal">
+  <button class="close-btn" type="button" onclick="closeModal('registerModal')">x</button>
+  <h2>Create Account</h2>
+<form id="registerForm">
+<div class="row">
+  <input type="text" id="regFirstName" placeholder="First Name" required>
+  <input type="text"id="regLastName" placeholder="Last Name" required>
+</div>
+<div class="row">
+  <input type="email" id="regEmail" placeholder="Email" required>
+  <input type="password" id="regPassword" placeholder="Password" required>
+</div>
+
+
+<div class="row">
+  <input type="text" id="regPhone" placeholder="+995555123456" required>
+  <input type="text" id="regZip" placeholder="Zip Code" required>
+</div>
+
+<div class="row">
+<input type="text" id="regAddress" placeholder="address" required>
+<input type="number" id="regAge" placeholder="Age" required>
+</div>
+<div class="row">
+  <input type="text" id="regAvatar" placeholder="Avatar URL" >
+</div>
+
+<div class="row">
+  <select id="regGender" required>
+    <option value="">Choose gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+
+<button class="sumbit-btn" type="submit">Register</button>
+</form>
+</div>
+
+    <!-- SIDE MENU -->
+    <div class="side-menu" id="menu">
+        <div class="close-menu" onclick="closeMenu()">X</div>
+        <a href="./index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+    </div>
+    
+   <div class="maindiv">
+<div class="sidebar">
+  <div class="breadcrumb">
+    <span class="home">Home</span>
+    <span class="sep">></span>
+    <span class="current">Order page 🛒</span>
+  </div>
+
+  
+  <h3 class="title">Browse by :</h3>
+
+  
+  <div class="filter">
+
+  
+    <div class="filter-item" onclick="toggleFilter(this)">
+      <span>Category</span>
+      <span class="icon">+</span>
+    </div>
+    <div class="filter-content">
+      <label><input type="checkbox"> Phones</label>
+      <label><input type="checkbox"> Laptops</label>
+      <label><input type="checkbox"> Accessories</label>
+    </div>
+
+    
+    <div class="filter-item" onclick="toggleFilter(this)">
+      <span>Brand</span>
+      <span class="icon">+</span>
+    </div>
+    <div class="filter-content">
+      <label><input type="checkbox"> Apple</label>
+      <label><input type="checkbox"> Samsung</label>
+      <label><input type="checkbox"> Sony</label>
+    </div>
+
+    
+    <div class="filter-item" onclick="toggleFilter(this)">
+      <span>Rating</span>
+      <span class="icon">+</span>
+    </div>
+    <div class="filter-content">
+      <p onclick="selectRating(this)">⭐⭐⭐⭐⭐</p>
+      <p onclick="selectRating(this)">⭐⭐⭐⭐ & up</p>
+    </div>
+
+    <div class="filter-item" onclick="toggleFilter(this)">
+      <span>Price</span>
+      <span class="icon">+</span>
+    </div>
+    <div class="filter-content">
+      <input type="range" min="0" max="2000" value="1000" id="priceRange">
+      <p>Up to $<span id="priceValue">1000</span></p>
+    </div>
+
+  </div>
+
+  <div class="get-all">
+    <span>GET ALL</span>
+    <span class="back">↩</span>
+    
+  </div>
+
+</div>
+<div class="main">
+  <div id="nav"></div>
+
+  <section id="product-sect"></section>
+</div>
+  </div>
+</div>
+<!--footer-->
+</footer>
+<div class="footer-bottom">
+        <p class="pay-text">We accept the following paying methods</p>
+        </div>
+<div class="pay-icons">
+  <i class="fa-brands fa-cc-visa fa-lg" style="color: rgb(99, 230, 108);"></i>
+  <i class="fa-brands fa-cc-mastercard"></i>
+  <i class="fa-brands fa-cc-amex"></i>
+  <i class="fa-brands fa-cc-jcb"></i>
+  <i class="fa-brands fa-cc-diners-club"></i>
+  <i class="fa-brands fa-cc-discover"></i>
+  <i class="fa-brands fa-paypal"></i>
+           </div>
+
+        <p class="copy">© 2026 Kokolaa17 | Digital Shop | All Right Reserved</p>
+    </div>
+<script src="./shop.js"></script>
+</body>
+
+</html>

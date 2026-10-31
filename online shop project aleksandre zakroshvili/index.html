@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigitalStore</title>
+
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="nav">
+
+    <div class="logo">
+      <h1>Digital<span>Store</span></h1>
+    </div>
+
+      <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <i class="fa fa-search"></i>
+</div>
+
+    <div class="nav-right">
+      <div onclick="openModal('registerModal')">Sign up</div>
+      <div onclick="openModal('loginModal')">Log in</div>
+
+
+
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<!-- LOGIN -->
+<div class="modal" id="loginModal">
+  <button class="close-btn" type="button" onclick="closeModal('loginModal')">x</button>
+  <h2>Log In</h2>
+
+  <form id="loginForm">
+    <div class="row">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+    </div>
+    <div class="row">
+      <input type="password" id="loginPassword" placeholder="Password" required>
+    </div>
+    <button class="sumbit-btn" type="submit">Log In</button>
+    <p>Don`t have an account? Signup now</p>
+  </form>
+  
+</div>
+
+<!-- SIGNUP -->
+<div class="modal" id="registerModal">
+  <button class="close-btn" type="button" onclick="closeModal('registerModal')">x</button>
+  <h2>Create Account</h2>
+<form id="registerForm">
+<div class="row">
+  <input type="text" id="regFirstName" placeholder="First Name" required>
+  <input type="text"id="regLastName" placeholder="Last Name" required>
+</div>
+<div class="row">
+  <input type="email" id="regEmail" placeholder="Email" required>
+  <input type="password" id="regPassword" placeholder="Password" required>
+</div>
+
+
+<div class="row">
+  <input type="text" id="regPhone" placeholder="+995555123456" required>
+  <input type="text" id="regZip" placeholder="Zip Code" required>
+</div>
+
+<div class="row">
+<input type="text" id="regAddress" placeholder="address" required>
+<input type="number" id="regAge" placeholder="Age" required>
+</div>
+<div class="row">
+  <input type="text" id="regAvatar" placeholder="Avatar URL" >
+</div>
+
+<div class="row">
+  <select id="regGender" required>
+    <option value="">Choose gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+
+<button class="sumbit-btn" type="submit">Register</button>
+</form>
+</div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <div class="close-menu" onclick="closeMenu()">X</div>
+  <a href="./index.html">Home</a>
+  <a href="./shop.html">Shop</a>
+</div>
+
+<!--loop-->
+<section class="hero">
+    <div class="hero-container">
+        <img src="./images/c837a6_9c1280daaeb0481abc58e6e236efdf59~mv2.avif" alt="#" class="active">
+        <img src="./images/c837a6_837f9cd4f59146c3ad47a2bd882fedfd~mv2.avif" alt="#">
+        <img src="./images/c837a6_f58829a26e594ca3aa72383e19cf39b9~mv2.avif" alt="#">
+        <div class="hero-text">
+            <span class="badge">Best Prices</span>
+            <h1>Incredible Prices <br>
+                on All Your <br>
+                Favorite Items
+            </h1></a>
+            <p>Get more for less on selected brands</p>
+            <button class="shopbtn"> <a href="./shop.html">Shop Now <i class="fa-solid fa-cart-arrow-down icon"></i></a></button>
+            
+        </div>
+    </div>
+</section>
+
+<!--productebi-->
+<div class="cont">
+    <h1 class="cont-text">Best Sellers</h1>
+    <section id="product-sect"></section>
+</div>
+<!--footer-->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container-flex">
+            
+            <div class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" id="Transfer-Motorcycle--Streamline-Core" height="14" width="14">
+  <desc>
+    Transfer Motorcycle Streamline Icon: https://streamlinehq.com
+  </desc>
+  <g id="transfer-motorcycle--motorcycle-shipping-delivery-courier-transfer">
+    <path id="Vector" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M10.4989 13.4999c-0.82897 0 -1.50101 -0.672 -1.50101 -1.501 0 -0.8291 0.67204 -1.5011 1.50101 -1.5011 0.8291 0 1.5011 0.672 1.5011 1.5011 0 0.829 -0.672 1.501 -1.5011 1.501Z" stroke-width="1"></path>
+    <path id="Vector_2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M3.49894 13.4999c-0.82901 0 -1.50106 -0.672 -1.50106 -1.501 0 -0.829 0.67205 -1.5011 1.50106 -1.5011S5 11.1699 5 11.9989c0 0.829 -0.67205 1.501 -1.50106 1.501Z" stroke-width="1"></path>
+    <path id="Vector 2548" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M2 12H0.5v-2c0 -1.10457 0.89543 -2 2 -2h2c1.10457 0 2 0.89543 2 2v0.5c0 0.8284 0.67157 1.5 1.5 1.5h1" stroke-width="1"></path>
+    <path id="Vector 2549" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M12 12h0.5c0.5523 0 1.0119 -0.4519 0.9079 -0.9943C13.0767 9.27756 11.8659 8 10 8h-0.5" stroke-width="1"></path>
+    <path id="Vector 2550" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M8 3.5h1.5v7.3785" stroke-width="1"></path>
+    <path id="Vector 2551" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.5 4.5h-1c-0.55228 0 -1 0.44772 -1 1s0.44772 1 1 1h1v-2Z" stroke-width="1"></path>
+    <path id="Vector 2556" stroke="#000000" stroke-linecap="round" d="M1.5 8H4c0.55228 0 1 -0.44772 1 -1V4.5c0 -0.55228 -0.44772 -1 -1 -1H1.5c-0.552285 0 -1 0.44772 -1 1V7c0 0.55228 0.447715 1 1 1Z" stroke-width="1"></path>
+  </g>
+</svg>
+                <p>Curb-side<br>pickup</p>
+            </div>
+
+            <div class="footer-item">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+</svg>
+                <p>Free<br>shipping</p>
+            </div>
+
+            <div class="footer-item">
+               <i class="fa-solid fa-tags" style="color: rgb(0, 0, 0);"></i>
+                <p>Low prices<br>guaranteed</p>
+            </div>
+
+            <div class="footer-item">
+              <i class="fa-graphite fa-thin fa-clock" style="color: rgb(0, 0, 0);"></i>
+                <p>Available<br>to you 24/7</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+    <div class="footer-bottom">
+        <p class="pay-text">We accept the following paying methods</p>
+        </div>
+<div class="pay-icons">
+  <i class="fa-brands fa-cc-visa fa-lg" style="color: rgb(99, 230, 108);"></i>
+  <i class="fa-brands fa-cc-mastercard"></i>
+  <i class="fa-brands fa-cc-amex"></i>
+  <i class="fa-brands fa-cc-jcb"></i>
+  <i class="fa-brands fa-cc-diners-club"></i>
+  <i class="fa-brands fa-cc-discover"></i>
+  <i class="fa-brands fa-paypal"></i>
+           </div>
+
+        <p class="copy">© 2026 Kokolaa17 | Digital Shop | All Right Reserved</p>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
